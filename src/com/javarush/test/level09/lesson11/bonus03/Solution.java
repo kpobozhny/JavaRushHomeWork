@@ -26,6 +26,7 @@ import java.util.ArrayList;
 Яблоко
 */
 
+
 public class Solution
 {
     public static void main(String[] args) throws Exception
