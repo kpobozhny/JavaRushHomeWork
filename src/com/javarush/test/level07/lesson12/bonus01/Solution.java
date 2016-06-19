@@ -41,7 +41,7 @@ public class Solution
 
             counter++;
         }
-
+        reader.close();
         printList();
     }
 
