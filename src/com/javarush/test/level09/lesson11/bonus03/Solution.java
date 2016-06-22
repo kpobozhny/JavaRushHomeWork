@@ -54,7 +54,7 @@ public class Solution
         //напишите тут ваш код
         ArrayList<Integer> indexString = new ArrayList<Integer>();
         ArrayList<Integer> indexInreger = new ArrayList<Integer>();
-        for (int i = 0; i<array.length-1; i++){
+        for (int i = 0; i<array.length; i++){
             if (isNumber(array[i])){
                 indexInreger.add(i);
             }else indexString.add(i);
@@ -63,7 +63,7 @@ public class Solution
         String temp = "";
         for (int i=0;i< indexInreger.size();i++){
             for (int j=0;j< indexInreger.size()-i-1;j++){
-                if ( Integer.parseInt(array[indexInreger.get(j)]) > Integer.parseInt(array[indexInreger.get(j+1)])){
+                if ( Integer.parseInt(array[indexInreger.get(j+1)]) > Integer.parseInt(array[indexInreger.get(j)])){
                     temp=array[indexInreger.get(j+1)];
                     array[indexInreger.get(j+1)]=array[indexInreger.get(j)];
                     array[indexInreger.get(j)]=temp;
@@ -74,7 +74,7 @@ public class Solution
 
         for (int i=0;i< indexString.size();i++){
             for (int j=0;j< indexString.size()-i-1;j++){
-                if ( isGreaterThan(array[indexString.get(j+1)],array[indexString.get(j)])){
+                if ( isGreaterThan(array[indexString.get(j)],array[indexString.get(j+1)])){
                     temp=array[indexString.get(j+1)];
                     array[indexString.get(j+1)]=array[indexString.get(j)];
                     array[indexString.get(j)]=temp;

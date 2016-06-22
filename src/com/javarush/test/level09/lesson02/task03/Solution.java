@@ -22,7 +22,7 @@ public class Solution
     public static int method2()
     {
         method3();
-        //System.out.println(Thread.currentThread().getStackTrace()[2].getLineNumber());
+        System.out.println(Thread.currentThread().getStackTrace()[2].getLineNumber());
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
     }
 

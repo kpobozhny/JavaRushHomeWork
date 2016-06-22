@@ -17,7 +17,7 @@ public class Solution
     {
       try{
           method1();
-      } catch (Exception e){
+      } catch (Exception1 e){
           String s = e.getMessage();
           String t = e.getClass().getSimpleName();
           System.out.println(t + "  : " + s);

@@ -9,14 +9,15 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         method1();
-//        System.out.println(method1());
-//        System.out.println(method2());
-//        System.out.println(method3());
+        //System.out.println(method1());
+        //System.out.println(method2());
+        //System.out.println(method3());
     }
 
     public static String method1()
     {
         method2();
+        //System.out.println(method2());
         StackTraceElement[] StackTraceElements = Thread.currentThread().getStackTrace();
         //the first element is "getStackTrace", the second - "its own name", the third - the necessary method
         return StackTraceElements[2].getMethodName();
@@ -26,6 +27,7 @@ public class Solution
     public static String method2()
     {
         method3();
+        //System.out.println(method3());
         StackTraceElement[] StackTraceElements = Thread.currentThread().getStackTrace();
         return StackTraceElements[2].getMethodName();
 
