@@ -52,6 +52,36 @@ public class Solution
     public static void sort(String[] array)
     {
         //напишите тут ваш код
+        ArrayList<Integer> indexString = new ArrayList<Integer>();
+        ArrayList<Integer> indexInreger = new ArrayList<Integer>();
+        for (int i = 0; i<array.length-1; i++){
+            if (isNumber(array[i])){
+                indexInreger.add(i);
+            }else indexString.add(i);
+        }
+
+        String temp = "";
+        for (int i=0;i< indexInreger.size();i++){
+            for (int j=0;j< indexInreger.size()-i-1;j++){
+                if ( Integer.parseInt(array[indexInreger.get(j)]) > Integer.parseInt(array[indexInreger.get(j+1)])){
+                    temp=array[indexInreger.get(j+1)];
+                    array[indexInreger.get(j+1)]=array[indexInreger.get(j)];
+                    array[indexInreger.get(j)]=temp;
+                }
+            }
+
+        }
+
+        for (int i=0;i< indexString.size();i++){
+            for (int j=0;j< indexString.size()-i-1;j++){
+                if ( isGreaterThan(array[indexString.get(j+1)],array[indexString.get(j)])){
+                    temp=array[indexString.get(j+1)];
+                    array[indexString.get(j+1)]=array[indexString.get(j)];
+                    array[indexString.get(j)]=temp;
+                }
+            }
+
+        }
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
