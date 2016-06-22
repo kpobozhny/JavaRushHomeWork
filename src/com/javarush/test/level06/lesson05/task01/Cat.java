@@ -6,9 +6,7 @@ package com.javarush.test.level06.lesson05.task01;
 
 public class Cat
 {
-    protected void finalize() throws Throwable{
-
-    }
+    protected void finalize() throws Throwable{}
 
 }
 

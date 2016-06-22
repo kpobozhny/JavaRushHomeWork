@@ -59,6 +59,7 @@ public class Solution
 
 
         HashMap<String, Date> myMap = createMap();
+        System.out.println(myMap);
         removeAllSummerPeople(myMap);
         System.out.println(myMap);
     }
