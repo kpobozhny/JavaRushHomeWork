@@ -14,14 +14,10 @@ public class Solution
     public static void main(String[] args)
     {
         int a = 0;
-        int b = (int) a + 46;
+        int b = (byte) a + 46;
         byte c = (byte) (a*b);
-        double f = (double) 1234.15;
+        double f = (char) 1234.15;
         long d = (long) (a + f / c + b);
-        System.out.println("a: " + a);
-        System.out.println("b: " + b);
-        System.out.println("c: " + c);
-        System.out.println("f: " + f);
         System.out.println(d);
     }
 }
