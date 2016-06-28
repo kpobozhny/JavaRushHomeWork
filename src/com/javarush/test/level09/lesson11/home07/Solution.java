@@ -11,7 +11,7 @@ public class Solution
     public int C = A * B;
     public static int D = A * B;
 
-    public static void main(String[] args)
+    public void main(String[] args)
     {
         Solution room = new Solution();
         room.A = 5;

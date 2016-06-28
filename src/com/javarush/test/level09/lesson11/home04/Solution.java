@@ -16,5 +16,12 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String s = reader.readLine();
+        Date d = new Date(s);
+        SimpleDateFormat sd = new SimpleDateFormat("MMM dd, yyyy");
+        System.out.println(sd.format(d).toUpperCase());
+
     }
 }
