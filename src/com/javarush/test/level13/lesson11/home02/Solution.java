@@ -19,6 +19,10 @@ public class Solution
     {
         private String type;
 
+        public String getWeatherType(){
+            return this.type;
+        };
+
         Today(String type)
         {
             this.type = type;
