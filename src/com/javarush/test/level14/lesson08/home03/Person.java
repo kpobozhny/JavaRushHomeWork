@@ -2,6 +2,8 @@ package com.javarush.test.level14.lesson08.home03;
 
 public interface Person
 {
+
+
     public static class User implements Person
     {
         void live()

@@ -2,6 +2,9 @@ package com.javarush.test.level14.lesson08.home03;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /* User, Looser, Coder and Proger
 1. Ввести [в цикле] с клавиатуры несколько строк (ключей).
@@ -26,18 +29,33 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Person person = null;
         String key = null;
+        Set<String> dictionary = new HashSet<String>(Arrays.asList("user", "looser", "coder", "proger"));
+        //Set<String> keys = new HashSet<String>;
+        while(true){
+            key=reader.readLine();
+            if (!dictionary.contains(key)) break;
 
-        //тут цикл по чтению ключей, пункт 1
-        {
-        //создаем объект, пункт 2
-
-        doWork(person); //вызываем doWork
-
+            if (key.equals("user")){
+                person = new Person.User();
+            } else if (key.equals("looser")){
+                person = new Person.Looser();
+            } else if(key.equals("coder")){
+                person = new Person.Coder();
+            } else if(key.equals("proger")){
+                person = new Person.Proger();
+            }
+            doWork(person);
         }
+
+
     }
 
     public static void doWork(Person person)
     {
         // пункт 3
+        if (person instanceof Person.User) ((Person.User)person).live();
+        else if (person instanceof Person.Looser) ((Person.Looser)person).doNothing();
+        else if (person instanceof Person.Coder) ((Person.Coder)person).coding();
+        else if (person instanceof Person.Proger) ((Person.Proger)person).enjoy();
     }
 }
