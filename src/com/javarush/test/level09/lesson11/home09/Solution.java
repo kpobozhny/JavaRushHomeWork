@@ -1,15 +1,18 @@
 package com.javarush.test.level09.lesson11.home09;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+
+
 
 /* Десять котов
 Создать класс кот – Cat, с полем «имя» (String).
 Создать словарь Map(<String, Cat>) и добавить туда 10 котов в виде «Имя»-«Кот».
 Получить из Map множество(Set) всех имен и вывести его на экран.
 */
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class Solution
 {
@@ -33,9 +36,12 @@ public class Solution
 
     public static Set<Cat> convertMapToSet(Map<String, Cat> map)
     {
+
+        //Set<Cat> set = new HashSet<Cat>(map.values());
+
         //напишите тут ваш код
         Set<Cat> catsSet = new HashSet<Cat>();
-        for (HashMap.Entry<String, Cat> el : map.entrySet()){
+        for (Map.Entry<String, Cat> el : map.entrySet()){
             catsSet.add(el.getValue());
         }
         return catsSet;
@@ -60,7 +66,7 @@ public class Solution
 
         public String toString()
         {
-            return "Cat "+this.name;
+            return "Cat " + this.name;
         }
     }
 
