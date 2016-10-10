@@ -42,7 +42,10 @@ public class Solution {
             String[] strAr = str.split("\\&");
             for (int i=0;i<strAr.length;i++){
 
-                strMap.put(strAr[i].split("=")[0],strAr[i].split("=")[1]);
+
+                if (strAr[i].split("=").length>1){
+                    strMap.put(strAr[i].split("=")[0],strAr[i].split("=")[1]);
+                } else strMap.put(strAr[i].split("=")[0],null);
 
             }
 
@@ -53,8 +56,13 @@ public class Solution {
             System.out.println();
             for(Map.Entry<String, String> e: strMap.entrySet()){
                 if (e.getKey().equals("obj")){
-                    if (e.getValue().contains(".")) alert(Double.parseDouble(e.getValue()));
-                    else alert(e.getValue());
+                    try{
+                        alert(Double.parseDouble(e.getValue()));
+                    } catch (NumberFormatException ex){
+                        alert(e.getValue());
+                    }
+
+
                 }
             }
 
