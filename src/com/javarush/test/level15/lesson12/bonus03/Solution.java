@@ -27,7 +27,7 @@ public class Solution {
     public static String factorial(int n) {
         //add your code here
         BigInteger f= BigInteger.valueOf(0);
-        if (n==0)f=BigInteger.valueOf(1);
+        f=BigInteger.valueOf(1);
         if (n>0){
             f=BigInteger.valueOf(n);
             for (int i=n-1;i>0;i--){
