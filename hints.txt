@@ -1,1 +1,8 @@
-com.javarush.test.level15.lesson12.bonus03; - BigInteger (factorial example)
+level15.lesson12.bonus03; - BigInteger (factorial example)
+level14.lesson08.bonus01; - Exceptions examples
+level16.lesson13.bonus01; - Factory method pattern
+level15.lesson12.bonus02; - Template pattern
+level14.lesson08.bonus03; - Singleton pattern
+level16.lesson13.bonus03; - UncaughtExceptionHandler
+
+
