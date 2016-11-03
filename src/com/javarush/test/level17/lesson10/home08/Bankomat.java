@@ -14,9 +14,11 @@ package com.javarush.test.level17.lesson10.home08;
 Найти и исправить ошибку
 */
 
+
+
 public class Bankomat {
 
-    static BankAccount account = new BankAccount("Amigo");
+    static BankAccount account = new BankAccount( "Amigo" );
 
     public static volatile boolean isStopped;
 
@@ -33,7 +35,7 @@ public class Bankomat {
         @Override
         public void run() {
             while (!isStopped) {
-                account.deposit("1000");            //кладем на счет
+                account.deposit("1000");//кладем на счет
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
